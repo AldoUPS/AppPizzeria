@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="530dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="-2dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@mipmap/Pizza" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="201dp"
+        app:srcCompat="@mipmap/logo" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="419dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="262dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="52dp"
+        android:background="#8C000000">
+
+        <EditText
+            android:id="@+id/nombre"
+            android:layout_width="241dp"
+            android:layout_height="43dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginEnd="85dp"
+            android:layout_marginBottom="338dp"
+            android:background="#99FFFFFF"
+            android:ems="10"
+            android:hint="nombres(s):"
+            android:textColorHint="@color/gris"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/Apellidos"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginEnd="85dp"
+            android:layout_marginBottom="284dp"
+            android:background="#99FFFFFF"
+            android:ems="10"
+            android:hint="apellidos:"
+            android:textColorHint="@color/gris"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/correo2"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginEnd="85dp"
+            android:layout_marginBottom="169dp"
+            android:background="#99FFFFFF"
+            android:ems="10"
+            android:hint="correo electronico:"
+            android:textColorHint="@color/gris"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="242dp"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginEnd="85dp"
+            android:layout_marginBottom="226dp"
+            android:background="#99FFFFFF"
+            android:ems="10"
+            android:hint="contraseña:"
+            android:textColorHint="@color/gris"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="67dp"
+            android:layout_marginBottom="102dp"
+            android:backgroundTint="#05D322"
+            android:text="registrar" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="67dp"
+            android:layout_marginBottom="102dp"
+            android:backgroundTint="#FF0000"
+            android:text="cancelar" />
+    </RelativeLayout>
+
+</RelativeLayout>
