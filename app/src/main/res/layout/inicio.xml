@@ -16,7 +16,7 @@
         android:adjustViewBounds="true"
         android:cropToPadding="true"
         android:scaleType="centerCrop"
-        app:srcCompat="@mipmap/Pizza" />
+        app:srcCompat="@mipmap/pizza" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -137,7 +137,4 @@
             android:textColor="@color/blanco" />
 
     </RelativeLayout>
-
-
-
 </RelativeLayout>
