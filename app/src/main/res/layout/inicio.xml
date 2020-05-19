@@ -99,7 +99,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:backgroundTint="#05D322"
-            android:onClick="onClick"
+            android:onClick="ingresar"
             android:text="ingresar" />
 
         <Button
@@ -110,7 +110,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="19dp"
             android:layout_marginEnd="30dp"
-            android:onClick="onClick"
+            android:onClick="registro"
             android:text="registrar " />
 
         <TextView

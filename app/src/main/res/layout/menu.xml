@@ -119,7 +119,7 @@
         app:srcCompat="@mipmap/entrega" />
 
     <Button
-        android:id="@+id/RecogerO"
+        android:id="@+id/recogerO"
         android:layout_width="101dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"

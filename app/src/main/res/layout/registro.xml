@@ -56,7 +56,7 @@
             android:textColorHint="@color/gris" />
 
         <EditText
-            android:id="@+id/Apellidos"
+            android:id="@+id/apellidos"
             android:layout_width="wrap_content"
             android:layout_height="43dp"
             android:layout_alignParentStart="true"
@@ -104,7 +104,7 @@
             android:textColorHint="@color/gris" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/registrar2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -112,10 +112,11 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="267dp"
             android:backgroundTint="#05D322"
+            android:onClick="registrar"
             android:text="registrar" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/cancelar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -123,6 +124,7 @@
             android:layout_marginTop="267dp"
             android:layout_marginEnd="40dp"
             android:backgroundTint="#FF0000"
+            android:onClick="cancelar"
             android:text="cancelar" />
     </RelativeLayout>
 
