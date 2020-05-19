@@ -5,9 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,16 +15,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.inicio);
     }
 
-    public void onClick(View v) {
-        Intent Psiguiente=null;
+    public void onClick (View v){
+        Intent x = null;
+
         switch (v.getId()){
             case R.id.ingresar:
-                Psiguiente = new Intent(MainActivity.this,menuActivity.class);
-                break;
+                x= new Intent(MainActivity.this,menuActivity.class);
 
-            case R.id.registrarse:
-                Psiguiente= new Intent(MainActivity.this,registroActivity.class);
+                break;
+            case R.id.registrar:
+                x= new Intent(MainActivity.this,registroActivity.class);
                 break;
         }
+        startActivity(x);
     }
 }

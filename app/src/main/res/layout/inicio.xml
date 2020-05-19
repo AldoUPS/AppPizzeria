@@ -5,36 +5,89 @@
     android:layout_height="match_parent"
     >
 
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="114dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        app:srcCompat="@mipmap/logo" />
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="530dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginBottom="-2dp"
-        android:adjustViewBounds="true"
-        android:cropToPadding="true"
-        android:scaleType="centerCrop"
-        app:srcCompat="@mipmap/pizza" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="match_parent"
-        android:layout_height="201dp"
-        app:srcCompat="@mipmap/logo" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="419dp"
+        android:layout_height="527dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="262dp"
+        android:layout_marginTop="114dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="-1dp"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        app:srcCompat="@mipmap/pizza" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="141dp"
+        android:layout_marginEnd="0dp"
+        android:background="#8C000000"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/correo"
+            android:layout_width="238dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="10dp"
+            android:background="#99FFFFFF"
+            android:ems="10"
+            android:hint="correo electronico:"
+            android:inputType="textEmailAddress"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/gris" />
+
+        <EditText
+            android:id="@+id/contrasena"
+            android:layout_width="238dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginBottom="10dp"
+            android:background="#99FFFFFF"
+            android:ems="10"
+            android:hint="contraseña:"
+            android:inputType="textPassword"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/gris" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="361dp"
+        android:layout_height="188dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="251dp"
+        android:layout_marginEnd="-1dp"
         android:background="#8C000000">
 
         <Button
@@ -42,99 +95,58 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="74dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="210dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
             android:backgroundTint="#05D322"
+            android:onClick="onClick"
             android:text="ingresar" />
 
-
         <Button
-            android:id="@+id/btnRandom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/registrar"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="70dp"
-            android:layout_marginBottom="210dp"
-            android:text="random" />
-
-        <Button
-            android:id="@+id/registrarse"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="70dp"
-            android:layout_marginBottom="210dp"
-            android:text="registrarse" />
-
-        <Button
-            android:id="@+id/facebook"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="75dp"
-            android:layout_marginBottom="100dp"
-            android:backgroundTint="#0511CE"
-            android:text="Facebook" />
-
-        <Button
-            android:id="@+id/gmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="82dp"
-            android:layout_marginBottom="94dp"
-            android:text="Gmail" />
-
-        <EditText
-            android:id="@+id/contraseña"
-            android:layout_width="226dp"
-            android:layout_height="43dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="92dp"
-            android:layout_marginEnd="92dp"
-            android:layout_marginBottom="278dp"
-            android:background="#99FFFFFF"
-            android:ems="10"
-            android:hint="contraseña:"
-            android:inputType="textPassword"
-            android:textColorHint="@color/gris" />
-
-        <EditText
-            android:id="@+id/correo"
-            android:layout_width="225dp"
-            android:layout_height="45dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="92dp"
-            android:layout_marginTop="299dp"
-            android:layout_marginEnd="92dp"
-            android:layout_marginBottom="340dp"
-            android:background="#99FFFFFF"
-            android:ems="10"
-            android:hint="correo electronico:"
-            android:inputType="textPersonName"
-            android:textColorHint="@color/gris" />
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="30dp"
+            android:onClick="onClick"
+            android:text="registrar " />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="68dp"
-            android:layout_marginBottom="168dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="93dp"
             android:text="O ingresar con tu cuenta de:"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/blanco" />
 
+        <Button
+            android:id="@+id/facebook"
+            android:layout_width="107dp"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="127dp"
+            android:backgroundTint="#040ADD"
+            android:text="facebook" />
+
+        <Button
+            android:id="@+id/gmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="127dp"
+            android:layout_marginEnd="30dp"
+            android:text="gmail" />
+
     </RelativeLayout>
+
+
 </RelativeLayout>
