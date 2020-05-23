@@ -14,6 +14,12 @@ public class menuActivity extends AppCompatActivity {
         setContentView(R.layout.menu);
     }
 
+    public void MenuP (View v){
+        Intent x= new Intent(menuActivity.this,PizzasM.class);
+        startActivity(x);
+    }
+
+
     /*public void onClick (View v){
         Intent x=null;
 

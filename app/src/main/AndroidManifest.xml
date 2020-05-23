@@ -32,7 +32,13 @@
 
         <activity android:name=".pedidoDActivity"></activity>
 
+        <activity android:name="adaptadorP"></activity>
 
+        <activity android:name=".PizzasM"></activity>
+
+        <activity android:name="Pizzas"></activity>
+
+        <activity android:name=".CantidadP"> </activity>
 
 
     </application>

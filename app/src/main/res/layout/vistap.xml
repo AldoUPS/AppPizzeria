@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/pizzas" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pizza de peperoni"
+        android:textSize="23sp"
+        android:layout_toRightOf="@+id/imagen"
+        android:textStyle="bold"
+        android:id="@+id/tipo_pizza"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pepperoni y queso mozzarela"
+        android:id="@+id/descripcion"
+        android:layout_below="@+id/tipo_pizza"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/imagen"
+        />
+
+</RelativeLayout>
