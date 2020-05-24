@@ -35,6 +35,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="-1dp"
         android:layout_marginTop="78dp"
+        android:onClick="MenuP"
         android:scaleType="fitXY"
         app:srcCompat="@mipmap/pizzas" />
 
