@@ -1,5 +1,6 @@
 package com.example.apppizzeria;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.apppizzeria.modelos.Platillo;
 
 import java.util.List;
@@ -19,9 +21,11 @@ public class adaptadorP extends RecyclerView.Adapter<adaptadorP.PlatilloViewHold
 
     List<Platillo> listaPlatillos;
     View.OnClickListener Listener;
+    Context context;
 
-    public adaptadorP(List<Platillo> listaPlatillos) {
+    public adaptadorP(Context context, List<Platillo> listaPlatillos) {
         this.listaPlatillos = listaPlatillos;
+        this.context = context;
     }
 
     @NonNull
@@ -36,10 +40,12 @@ public class adaptadorP extends RecyclerView.Adapter<adaptadorP.PlatilloViewHold
     @Override
     public void onBindViewHolder(@NonNull adaptadorP.PlatilloViewHolder holder, int position) {
 
-        holder.imagenP.setImageResource(R.mipmap.pizza);
-        holder.titulo.setText(listaPlatillos.get(position).nombre);
-        holder.precio.setText(String.valueOf(listaPlatillos.get(position).precio));
+        Platillo platisho = listaPlatillos.get(position);
 
+        holder.imagenP.setImageResource(R.mipmap.pizza);
+        holder.titulo.setText(platisho.nombre);
+        holder.precio.setText(String.valueOf(platisho.precio));
+        Glide.with(context).load(platisho.imagen).into(holder.imagenP);
     }
 
     @Override

@@ -32,7 +32,7 @@ public class PizzasM extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pizzas);
 
-        rv = findViewById(R.id.RvP);
+        rv = (RecyclerView)findViewById(R.id.RvP);
 
         LinearLayoutManager esp = new LinearLayoutManager(this);
         rv.setLayoutManager(esp);
@@ -53,7 +53,8 @@ public class PizzasM extends AppCompatActivity {
         call.enqueue(new Callback<List<Platillo>>() {
             @Override
             public void onResponse(Call<List<Platillo>> call, Response<List<Platillo>> response) {
-                adaptador = new adaptadorP(response.body());
+
+                adaptador = new adaptadorP(getApplicationContext(), response.body());
 
                 rv.setAdapter(adaptador);
 
