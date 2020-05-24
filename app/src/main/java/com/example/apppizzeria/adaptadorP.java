@@ -8,39 +8,43 @@ import android.widget.TextView;
 
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.view.menu.MenuView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.apppizzeria.modelos.Platillo;
+
 import java.util.List;
 
 
-public class adaptadorP extends RecyclerView.Adapter<adaptadorP.PizzasViewHolder> implements View.OnClickListener {
-    List<Pizzas> listaPizza;
+public class adaptadorP extends RecyclerView.Adapter<adaptadorP.PlatilloViewHolder> implements View.OnClickListener {
+
+    List<Platillo> listaPlatillos;
     View.OnClickListener Listener;
 
-    public adaptadorP(List<Pizzas> listaPizza) {
-        this.listaPizza = listaPizza;
+    public adaptadorP(List<Platillo> listaPlatillos) {
+        this.listaPlatillos = listaPlatillos;
     }
 
     @NonNull
     @Override
-    public adaptadorP.PizzasViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public adaptadorP.PlatilloViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.vistap, parent,false);
-        PizzasViewHolder pizza = new PizzasViewHolder(v);
+        PlatilloViewHolder pizza = new PlatilloViewHolder(v);
         v.setOnClickListener(this);
         return pizza;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull adaptadorP.PizzasViewHolder holder, int position) {
-        holder.imagenP.setImageResource(listaPizza.get(position).getImagen());
-        holder.titulo.setText(listaPizza.get(position).getTitulo());
-        holder.descripcion.setText(listaPizza.get(position).getDescripcion());
+    public void onBindViewHolder(@NonNull adaptadorP.PlatilloViewHolder holder, int position) {
+
+        holder.imagenP.setImageResource(R.mipmap.pizza);
+        holder.titulo.setText(listaPlatillos.get(position).nombre);
+        holder.precio.setText(String.valueOf(listaPlatillos.get(position).precio));
 
     }
 
     @Override
     public int getItemCount() {
-        return listaPizza.size();
+        return listaPlatillos.size();
     }
 
     public void setOnClickListener(View.OnClickListener listener) {
@@ -54,16 +58,16 @@ public class adaptadorP extends RecyclerView.Adapter<adaptadorP.PizzasViewHolder
         }
     }
 
-    public class PizzasViewHolder extends RecyclerView.ViewHolder{
+    public class PlatilloViewHolder extends RecyclerView.ViewHolder{
 
         ImageView imagenP;
-        TextView descripcion, titulo;
+        TextView precio, titulo;
 
-        public PizzasViewHolder(@NonNull View itemView) {
+        public PlatilloViewHolder(@NonNull View itemView) {
             super(itemView);
-            imagenP = (ImageView)itemView.findViewById(R.id.imagen);
-            titulo = (TextView)itemView.findViewById(R.id.tipo_pizza);
-            descripcion = (TextView)itemView.findViewById(R.id.descripcion);
+            imagenP = itemView.findViewById(R.id.imagen);
+            titulo = itemView.findViewById(R.id.tipo_pizza);
+            precio = itemView.findViewById(R.id.descripcion);
         }
     }
 }

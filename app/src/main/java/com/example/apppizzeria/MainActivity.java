@@ -51,10 +51,10 @@ public class MainActivity extends AppCompatActivity  {
     }
 
     public void ingresar (View v){
-        if(validar()) {
+//        if(validar()) {
             Intent x = new Intent(MainActivity.this, menuActivity.class);
             startActivity(x);
-        }
+//        }
     }
 
     public void registro (View v){

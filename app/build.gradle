@@ -32,6 +32,6 @@ dependencies {
     //Librería para el cliente API
     //Contiene utilidades para construir peticiones (REQUEST)
     //de manera rapida
-    implementation 'com.amitshekhar.android:android-networking:1.0.2'
-
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
 }
